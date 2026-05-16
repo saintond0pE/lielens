@@ -465,7 +465,7 @@ textarea {
     letter-spacing: 0.1em;
 }
 
-.score-value {
+.score-value, .risk-badge {
     font-family: var(--font-display);
     font-size: 6rem;
     color: var(--neon-red);
