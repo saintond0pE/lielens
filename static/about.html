@@ -3,111 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABOUT | LIELENS Forensic Engine</title>
+    <title>ABOUT | LIELENS</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/styles.css">
     <style>
+        .about-hero {
+            padding: 120px 32px 80px;
+            background: var(--bg-void);
+            text-align: center;
+        }
         .manifesto-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            border-top: 2px solid var(--border-dim);
+            border-top: 1px solid var(--border-dim);
         }
         .manifesto-section {
-            padding: 80px 40px;
-            border-right: 2px solid var(--border-dim);
-            border-bottom: 2px solid var(--border-dim);
+            padding: 100px 60px;
+            border-right: 1px solid var(--border-dim);
+            border-bottom: 1px solid var(--border-dim);
         }
         .manifesto-section:nth-child(even) {
             border-right: none;
         }
         .section-num {
             font-family: var(--font-display);
-            font-size: 6rem;
-            line-height: 0.8;
+            font-size: 4rem;
             color: var(--neon-red);
             margin-bottom: 20px;
-            opacity: 0.3;
         }
         .section-title {
             font-family: var(--font-display);
-            font-size: 3rem;
-            line-height: 1;
-            margin-bottom: 30px;
+            font-size: 3.5rem;
+            line-height: 0.9;
+            margin-bottom: 25px;
             color: var(--text-primary);
         }
         .section-text {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             line-height: 1.8;
             color: var(--text-secondary);
-            max-width: 500px;
+            max-width: 550px;
         }
-        .framework-list {
-            margin-top: 40px;
-            list-style: none;
-        }
-        .framework-item {
-            padding: 15px 0;
-            border-bottom: 1px solid var(--border-dim);
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
-        .item-dot {
-            width: 10px;
-            height: 10px;
-            background: var(--neon-cyan);
-        }
-        .item-label {
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            font-size: 0.9rem;
-            color: var(--neon-cyan);
-        }
-        .about-hero {
-            padding: 100px 32px 60px;
-            background: var(--neon-red);
-            color: var(--bg-void);
-        }
-        .about-hero .title-line { color: var(--bg-void); }
-        .about-hero .title-outline { -webkit-text-stroke: 3px var(--bg-void); }
-        .about-hero .hero-subtitle { border-color: var(--bg-void); color: var(--bg-void); }
     </style>
 </head>
 <body>
-
-    <!-- TICKER BAR -->
-    <div class="ticker-bar">
-        <div class="ticker-content">
-            <span>FORENSIC MANIFESTO</span>
-            <span>THE 10-POINT ANALYSIS FRAMEWORK</span>
-            <span>MISSION: RESTORE INTERNET CREDIBILITY</span>
-            <span>FORENSIC MANIFESTO</span>
-            <span>THE 10-POINT ANALYSIS FRAMEWORK</span>
-        </div>
-    </div>
 
     <!-- NAV -->
     <nav class="nav-grid">
         <div class="nav-logo"><span class="logo-icon">👁</span></div>
         <div class="nav-links">
             <a href="/static/index.html" class="nav-link">SCAN</a>
-            <a href="/static/vault.html" class="nav-link">THE VAULT</a>
+            <a href="/static/vault.html" class="nav-link">ARCHIVE</a>
             <a href="/static/about.html" class="nav-link active">ABOUT</a>
         </div>
-        <div class="nav-status"><span class="status-dot"></span> MANIFESTO ONLINE</div>
+        <div class="nav-status"><span class="status-dot"></span> SYSTEM ACTIVE</div>
     </nav>
 
     <!-- HERO -->
     <section class="about-hero">
         <div class="hero-content">
             <h1 class="hero-title">
-                <span class="title-line">THE</span>
-                <span class="title-line title-outline">FORENSIC</span>
-                <span class="title-line">MANIFESTO</span>
+                <span class="title-line">RESTORING</span>
+                <span class="title-line title-outline">DIGITAL</span>
+                <span class="title-line title-accent">CLARITY</span>
             </h1>
-            <p class="hero-subtitle">LieLens is not a tool. It is an internet credibility layer. We dissect the psychology of persuasion and the architecture of manipulation.</p>
+            <p class="hero-subtitle">LieLens was built to solve a single problem: the internet has become too manipulative to trust by default.</p>
         </div>
     </section>
 
@@ -116,32 +78,26 @@
         
         <div class="manifesto-section">
             <span class="section-num">01</span>
-            <h2 class="section-title">THE PROBLEM</h2>
-            <p class="section-text">The internet has become a high-pressure persuasion engine. Manipulation tactics, once reserved for specialized marketing, are now used by everyone from fake gurus to synthetic bots. Truth is no longer a default—it must be extracted.</p>
+            <h2 class="section-title">THE NOISE</h2>
+            <p class="section-text">Every day, you encounter advertisements, posts, and emails designed to bypass your logic and trigger your emotions. From fake urgency to artificial social proof, the tactics of manipulation are everywhere.</p>
         </div>
 
         <div class="manifesto-section">
             <span class="section-num">02</span>
             <h2 class="section-title">OUR MISSION</h2>
-            <p class="section-text">To provide a digital forensic layer that identifies behavioral patterns of exploitation in real-time. We analyze not just what is said, but HOW it is being engineered to influence you.</p>
+            <p class="section-text">We provide a modern intelligence layer that scans content for these psychological patterns. Our goal is to give you back the power of informed decision-making by revealing what's hidden behind the copy.</p>
         </div>
 
         <div class="manifesto-section">
             <span class="section-num">03</span>
-            <h2 class="section-title">THE ENGINE</h2>
-            <p class="section-text">Powered by advanced Grok and Gemini neural networks, LieLens evaluates content through a 10-point forensic lens, scoring everything from logical consistency to emotional exploitation probability.</p>
+            <h2 class="section-title">HOW IT WORKS</h2>
+            <p class="section-text">Our engine evaluates text for common "red flag" tactics—scarcity scripts, authority simulation, and financial bait. It delivers a simple, human-understandable report so you can see exactly where the pressure is being applied.</p>
         </div>
 
         <div class="manifesto-section">
             <span class="section-num">04</span>
-            <h2 class="section-title">THE FRAMEWORK</h2>
-            <ul class="framework-list">
-                <li class="framework-item"><div class="item-dot"></div><span class="item-label">LOGICAL CONSISTENCY</span></li>
-                <li class="framework-item"><div class="item-dot"></div><span class="item-label">PSYCHOLOGICAL PRESSURE</span></li>
-                <li class="framework-item"><div class="item-dot"></div><span class="item-label">SCARCITY MANIPULATION</span></li>
-                <li class="framework-item"><div class="item-dot"></div><span class="item-label">AUTHORITY SIMULATION</span></li>
-                <li class="framework-item"><div class="item-dot"></div><span class="item-label">SYNTHETIC TEXT PATTERNS</span></li>
-            </ul>
+            <h2 class="section-title">THE VALUES</h2>
+            <p class="section-text">Transparency, neutrality, and clarity. LieLens doesn't tell you what to think; it tells you how you're being influenced. It’s a tool for the modern internet, built for people who value the truth.</p>
         </div>
 
     </div>
@@ -149,7 +105,7 @@
     <!-- FOOTER -->
     <footer class="footer-grid">
         <div class="footer-brand">LIELENS</div>
-        <div class="footer-copy">TRUST NOTHING. VERIFY EVERYTHING. © 2026</div>
+        <div class="footer-copy">SEE BEYOND THE WORDS. © 2026</div>
     </footer>
 
 </body>

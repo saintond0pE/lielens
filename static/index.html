@@ -40,62 +40,40 @@
         </div>
     </nav>
 
-    <!-- HERO — ASYMMETRICAL POSTER -->
+    <!-- HERO -->
     <section class="hero">
         <div class="hero-content">
             <h1 class="hero-title">
-                <span class="title-line">LIELENS</span>
-                <span class="title-line title-outline">FORENSIC</span>
-                <span class="title-line title-accent">ENGINE</span>
+                <span class="title-line">UNMASK</span>
+                <span class="title-line title-outline">THE</span>
+                <span class="title-line title-accent">TRUTH</span>
             </h1>
-            <p class="hero-subtitle">Digital intelligence analysis for internet credibility. We dissect manipulation tactics, fake urgency, and psychological exploitation in real-time.</p>
+            <p class="hero-subtitle">Instantly detect manipulation, fake urgency, and psychological pressure. Paste any content and let our intelligence engine reveal what's hidden.</p>
         </div>
         
         <div class="hero-badge">
             <div class="badge-inner">
-                <span class="badge-text" style="font-family: var(--font-display); font-size: 3rem; color: var(--neon-red); line-height: 1;">TRUST<br>LEVEL: 0%</span>
-                <span class="badge-version" style="display: block; font-family: var(--font-body); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.15em; color: var(--neon-cyan); margin-top: 15px;">v2.0 FORENSIC</span>
+                <span class="badge-text" style="font-family: var(--font-display); font-size: 3rem; color: var(--neon-red); line-height: 1;">TRUST<br>SCAN</span>
+                <span class="badge-version" style="display: block; font-family: var(--font-body); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.15em; color: var(--neon-cyan); margin-top: 15px;">v2.0 ACTIVE</span>
             </div>
         </div>
     </section>
 
-    <!-- SECTION DIVIDER -->
-    <div class="section-divider">
-        <span class="divider-label">MODULE: ACQUISITION_01</span>
-        <div style="height: 2px; background: var(--border-dim); width: 100%;"></div>
-        <span class="divider-label">STATUS: READY</span>
-    </div>
-
-    <!-- INSTRUMENT PANEL -->
-    <section class="analysis-section">
+    <!-- ANALYSIS SECTION -->
+    <section class="analysis-section" style="grid-template-columns: 1fr; max-width: 1000px;">
         <div class="input-panel">
-            <div class="panel-header">
-                <div class="panel-tag">TARGET_CONTENT_INPUT</div>
-                <div class="panel-tag" style="color: var(--text-dim);">UTF-8 SCANNER ACTIVE</div>
+            <div class="panel-header" style="background: transparent; border-bottom: 1px solid var(--border-dim);">
+                <div class="panel-tag">SCANNER</div>
+                <div class="panel-tag" style="color: var(--text-dim);">READY FOR INPUT</div>
             </div>
             
-            <textarea id="target-content" placeholder="PASTE TARGET CONTENT FOR DISSECTION..."></textarea>
+            <textarea id="target-content" placeholder="Paste social media posts, emails, or advertisements here..."></textarea>
             
-            <div class="input-footer" style="padding: 20px 25px; border-top: 3px solid var(--border-dim); display: flex; justify-content: space-between; align-items: center;">
-                <div id="char-count" class="char-count" style="font-family: var(--font-body); font-size: 0.75rem; color: var(--text-dim); font-weight: 700;">0 CHARS DETECTED</div>
-                <button class="analyze-btn" id="analyze-btn">INITIATE DISSECTION</button>
+            <div class="input-footer" style="padding: 20px 25px; border-top: 1px solid var(--border-dim); display: flex; justify-content: space-between; align-items: center;">
+                <div id="char-count" style="font-family: var(--font-body); font-size: 0.75rem; color: var(--text-dim); font-weight: 700;">0 CHARACTERS</div>
+                <button class="analyze-btn" id="analyze-btn">ANALYZE NOW</button>
             </div>
         </div>
-
-        <aside class="input-sidebar">
-            <div class="sidebar-module">
-                <span class="module-label">ENGINE_STATE</span>
-                <span id="state-val" class="module-value" style="color: var(--neon-cyan);">READY</span>
-            </div>
-            <div class="sidebar-module">
-                <span class="module-label">PROVIDER_LATENCY</span>
-                <span id="latency-val" class="module-value">--ms</span>
-            </div>
-            <div class="sidebar-module">
-                <span class="module-label">SECURITY_LAYER</span>
-                <span class="module-value" style="font-size: 1.5rem; color: var(--text-dim);">AES-256 ENCRYPTED</span>
-            </div>
-        </aside>
     </section>
 
     <!-- RESULTS -->
