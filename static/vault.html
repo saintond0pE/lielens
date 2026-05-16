@@ -179,155 +179,106 @@
 
     </div>
 
-    <!-- REPORT MODAL -->
-    <div id="report-modal" class="modal-overlay hidden">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="modal-tag">FORENSIC REPORT</div>
-                <button class="close-modal" onclick="closeModal()">✕ CLOSE</button>
-            </div>
-            
-            <div class="modal-body">
-                <div class="report-header">
-                    <span id="modal-case-id" class="case-id">CASE #0000-X</span>
-                    <h2 id="modal-case-title" class="report-title">CASE TITLE</h2>
-                </div>
-
-                <div class="report-grid">
-                    <div class="report-main">
-                        <div class="detail-section">
-                            <h3 class="detail-label">DISSECTION SUMMARY</h3>
-                            <p id="modal-summary" class="detail-text">Detailed breakdown of the manipulation architecture discovered in this case...</p>
-                        </div>
-                        
-                        <div class="detail-section">
-                            <h3 class="detail-label">DETECTED SIGNALS</h3>
-                            <div id="modal-tactics" class="tactics-grid">
-                                <!-- Chips go here -->
-                            </div>
-                        </div>
-
-                        <div class="detail-section">
-                            <h3 class="detail-label">FORENSIC REASONING</h3>
-                            <div id="modal-reasoning" class="reasoning-box">
-                                <!-- Long reasoning goes here -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="report-sidebar">
-                        <div class="sidebar-card">
-                            <span class="card-label">CREDIBILITY</span>
-                            <span id="modal-credibility" class="card-val">0%</span>
-                        </div>
-                        <div class="sidebar-card">
-                            <span class="card-label">MANIPULATION</span>
-                            <span id="modal-manipulation" class="card-val">0%</span>
-                        </div>
-                        <div class="sidebar-card">
-                            <span class="card-label">AI PROBABILITY</span>
-                            <span id="modal-ai" class="card-val">0%</span>
-                        </div>
-                        <div class="sidebar-card risk-active">
-                            <span class="card-label">RISK LEVEL</span>
-                            <span id="modal-risk" class="card-val">HIGH</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- FOOTER -->
-    <footer class="footer-grid">
-        <div class="footer-brand">LIELENS</div>
-        <div class="footer-copy">TRUST NOTHING. VERIFY EVERYTHING. © 2026</div>
-    </footer>
-
     <script>
-        const caseData = {
-            '8821-X': {
-                title: 'THE AI MILLIONAIRE BLUEPRINT',
-                risk: 'HIGH RISK',
-                riskVal: '94%',
+        const caseData = [
+            {
+                title: 'AI MILLIONAIRE BLUEPRINT',
+                risk: '94%',
+                riskLevel: 'CRITICAL',
                 credibility: '12%',
                 manipulation: '94%',
                 ai: '45%',
-                summary: 'Manipulation via fake authority and urgency. Claims "100% automated income" using proprietary LLM wrappers. Discovered exploiting financial desperation.',
+                summary: 'Manipulation via fake authority and urgency. Claims "100% automated income" using proprietary LLM wrappers. Exploits financial desperation.',
                 tactics: ['FAKE AUTHORITY', 'URGENCY PRESSURE', 'UNREALISTIC CLAIMS', 'FINANCIAL EXPLOITATION'],
-                reasoning: 'The content employs a classic "Success Formula" structure designed to bypass rational skepticism. It utilizes high-frequency dopamine-trigger language ($100k, 2 days, automation) and manufactures fake scarcity through a countdown timer script. Behavioral analysis shows 100% correlation with known pyramid scheme linguistic patterns.'
+                reasoning: 'This campaign targets individuals in financial transition using high-frequency urgency scripts. It manufactures artificial scarcity through a countdown timer and uses "Success Formula" language to bypass rational skepticism. The strategy relies heavily on the "Automation Dream" to mask a lack of underlying product utility.'
             },
-            '9102-B': {
+            {
                 title: 'COIN-VOID PUMP SCHEME',
-                risk: 'CRITICAL',
-                riskVal: '99%',
+                risk: '99%',
+                riskLevel: 'CRITICAL',
                 credibility: '2%',
                 manipulation: '99%',
                 ai: '88%',
-                summary: 'Classic social engineering via artificial social proof. Uses bot nets to simulate engagement and "Fear Of Missing Out" (FOMO) triggers.',
-                tactics: ['SOCIAL PROOF MANIPULATION', 'FOMO TRIGGER', 'PUMP & DUMP', 'BOT ENGAGEMENT'],
-                reasoning: 'Analysis of social engagement metrics shows 98.4% synthetic behavior. The narrative relies entirely on "Insider Positioning" simulation, claiming proprietary knowledge of an upcoming liquidity event. Logical analysis reveals zero underlying utility or business reality. Psychological pressure is at maximum levels.'
+                summary: 'Social engineering via artificial social proof. Uses bot nets to simulate engagement and "Fear Of Missing Out" (FOMO).',
+                tactics: ['SOCIAL PROOF', 'FOMO TRIGGER', 'PUMP & DUMP', 'BOT NETWORKS'],
+                reasoning: '98.4% of engagement detected is synthetic. The narrative uses "Insider Positioning" to simulate elite status. There is zero evidence of liquidity or technical utility. This is a classic social engineering script designed for rapid capital extraction via psychological pressure.'
             },
-            '7731-C': {
-                title: 'THE LAST CHANCE MASTERCLASS',
-                risk: 'MEDIUM',
-                riskVal: '62%',
+            {
+                title: 'LAST CHANCE MASTERCLASS',
+                risk: '62%',
+                riskLevel: 'MEDIUM',
                 credibility: '48%',
                 manipulation: '62%',
                 ai: '12%',
-                summary: 'Urgency-based psychological pressure. Employs fake timers and "only 3 spots left" script to bypass rational decision-making.',
-                tactics: ['FAKE SCARCITY', 'TIME PRESSURE', 'STATUS MANIPULATION'],
-                reasoning: 'While the product may exist, the marketing architecture is highly manipulative. The "Live" masterclass is actually a recorded loop, identified via metadata inconsistencies. Urgency signals are artificially generated to force a conversion before the user can evaluate the curriculum realism.'
+                summary: 'Urgency-based psychological pressure. Employs fake timers and limited-spot scripts to bypass rational thinking.',
+                tactics: ['FAKE SCARCITY', 'TIME PRESSURE', 'STATUS BAIT'],
+                reasoning: 'The marketing architecture is designed to force a conversion before the user can evaluate the curriculum. The "Live" masterclass is a pre-recorded loop, and the "limited spots" are non-existent. While the product may exist, the acquisition process is built on a foundation of artificial pressure.'
             },
-            '4410-Z': {
+            {
                 title: 'AI STARTUP VAPORWARE',
-                risk: 'HIGH RISK',
-                riskVal: '88%',
+                risk: '88%',
+                riskLevel: 'HIGH',
                 credibility: '24%',
                 manipulation: '88%',
                 ai: '62%',
-                summary: 'Marketing manipulation using fake technical authority. Uses AI buzzwords to mask lack of functional product or logic.',
-                tactics: ['TECHNICAL VAPORWARE', 'BUZZWORD STACKING', 'FAKE EXPERTISE'],
-                reasoning: 'The whitepaper contains recursive logic loops and non-functional code snippets. It targets insecure investors by simulating high-level technical complexity while failing basic logical consistency checks. Authority simulation is high, but technical probability is near zero.'
+                summary: 'Marketing manipulation using fake technical authority. Uses buzzwords to mask a lack of functional logic or product.',
+                tactics: ['VAPORWARE', 'BUZZWORD STACKING', 'FAKE EXPERTISE'],
+                reasoning: 'The technical claims contain recursive logic loops that fail basic consistency checks. It targets insecure investors by simulating high-level technical complexity. The authority simulation is effective but masks a near-zero probability of functional technical delivery.'
             }
-        };
+        ];
 
-        function openModal(id) {
-            const data = caseData[id];
+        function openModal(index) {
+            const data = caseData[index];
             if (!data) return;
 
-            document.getElementById('modal-case-id').textContent = `CASE #${id}`;
-            document.getElementById('modal-case-title').textContent = data.title;
-            document.getElementById('modal-summary').textContent = data.summary;
-            document.getElementById('modal-credibility').textContent = data.credibility;
-            document.getElementById('modal-manipulation').textContent = data.manipulation;
-            document.getElementById('modal-ai').textContent = data.ai;
-            document.getElementById('modal-risk').textContent = data.risk;
-            document.getElementById('modal-reasoning').textContent = data.reasoning;
+            // Simple report modal creation
+            const modal = document.createElement('div');
+            modal.className = 'modal-overlay';
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <button class="close-modal" onclick="this.closest('.modal-overlay').remove()">CLOSE [X]</button>
+                    <h2 style="font-family: var(--font-display); font-size: 4rem; margin-bottom: 40px;">ANALYSIS DETAILS</h2>
+                    
+                    <div class="score-grid" style="grid-template-columns: repeat(3, 1fr); margin-bottom: 60px; border-bottom: 1px solid var(--border-dim); padding-bottom: 40px;">
+                        <div class="score-item">
+                            <span style="display: block; font-size: 0.8rem; color: var(--text-dim); margin-bottom: 15px;">CREDIBILITY</span>
+                            <span style="font-family: var(--font-display); font-size: 6rem; color: var(--text-primary); line-height: 1;">${data.credibility}</span>
+                        </div>
+                        <div class="score-item">
+                            <span style="display: block; font-size: 0.8rem; color: var(--text-dim); margin-bottom: 15px;">MANIPULATION</span>
+                            <span style="font-family: var(--font-display); font-size: 6rem; color: var(--neon-red); line-height: 1;">${data.manipulation}</span>
+                        </div>
+                        <div class="score-item">
+                            <span style="display: block; font-size: 0.8rem; color: var(--text-dim); margin-bottom: 15px;">RISK LEVEL</span>
+                            <span style="font-family: var(--font-display); font-size: 6rem; color: var(--neon-red); line-height: 1;">${data.riskLevel}</span>
+                        </div>
+                    </div>
 
-            const tacticsGrid = document.getElementById('modal-tactics');
-            tacticsGrid.innerHTML = '';
-            data.tactics.forEach(t => {
-                const chip = document.createElement('div');
-                chip.className = 'tactic-chip danger';
-                chip.textContent = t;
-                tacticsGrid.appendChild(chip);
-            });
+                    <div class="results-layout">
+                        <div class="result-block">
+                            <h3 style="font-family: var(--font-body); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.15em; margin-bottom: 25px; color: var(--neon-cyan);">DETECTED PATTERNS</h3>
+                            <div class="tactics-list" style="display: flex; gap: 15px; flex-wrap: wrap;">
+                                ${data.tactics.map(t => `<span class="tactic-tag" style="border: 1px solid var(--neon-cyan); padding: 10px 20px; font-size: 0.8rem; font-weight: 700;">${t}</span>`).join('')}
+                            </div>
+                        </div>
 
-            document.getElementById('report-modal').classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
+                        <div class="result-block" style="margin-top: 60px;">
+                            <h3 style="font-family: var(--font-body); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.15em; margin-bottom: 25px; color: var(--neon-cyan);">THE SUMMARY</h3>
+                            <p style="font-size: 1.25rem; line-height: 1.8; color: var(--text-secondary);">${data.reasoning}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            document.body.appendChild(modal);
         }
 
-        function closeModal() {
-            document.getElementById('report-modal').classList.add('hidden');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Add click listeners to case files
-        document.querySelectorAll('.case-file').forEach(card => {
-            const id = card.querySelector('.case-id').textContent.replace('CASE #', '');
-            card.onclick = () => openModal(id);
+        // Add click listeners to "VIEW ANALYSIS" buttons
+        document.querySelectorAll('.view-report').forEach((btn, index) => {
+            btn.onclick = () => openModal(index);
         });
     </script>
+</body>
+</html>
 </body>
 </html>
