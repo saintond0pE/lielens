@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE VAULT | LIELENS Forensic Archive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+    <style>
+        .vault-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            border-top: 2px solid var(--border-dim);
+        }
+        .case-file {
+            border-right: 2px solid var(--border-dim);
+            border-bottom: 2px solid var(--border-dim);
+            padding: 40px;
+            transition: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .case-file:hover {
+            background: var(--bg-charcoal);
+        }
+        .case-file:hover .case-id {
+            color: var(--neon-red);
+        }
+        .case-id {
+            font-family: var(--font-body);
+            font-weight: 700;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            color: var(--text-dim);
+            margin-bottom: 15px;
+            display: block;
+        }
+        .case-title {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            line-height: 1;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        .case-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            border: 2px solid var(--neon-red);
+            color: var(--neon-red);
+            margin-bottom: 25px;
+        }
+        .case-tag.low { border-color: var(--neon-cyan); color: var(--neon-cyan); }
+        .case-summary {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+        .case-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .view-report {
+            font-family: var(--font-body);
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            color: var(--neon-red);
+            text-decoration: underline;
+        }
+        .case-risk {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--neon-red);
+        }
+        .vault-hero {
+            padding: 100px 32px 60px;
+            border-bottom: 4px solid var(--neon-cyan);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TICKER BAR -->
+    <div class="ticker-bar">
+        <div class="ticker-content">
+            <span>⚠ ARCHIVE OF DETECTED MANIPULATION</span>
+            <span>⚠ CASE HISTORY: 4,281 SCAMS DISSECTED</span>
+            <span>⚠ TRUST NOTHING. VERIFY EVERYTHING.</span>
+            <span>⚠ ARCHIVE OF DETECTED MANIPULATION</span>
+            <span>⚠ CASE HISTORY: 4,281 SCAMS DISSECTED</span>
+        </div>
+    </div>
+
+    <!-- NAV -->
+    <nav class="nav-grid">
+        <div class="nav-logo"><span class="logo-icon">👁</span></div>
+        <div class="nav-links">
+            <a href="/static/index.html" class="nav-link">SCAN</a>
+            <a href="/static/vault.html" class="nav-link active">THE VAULT</a>
+            <a href="/static/about.html" class="nav-link">ABOUT</a>
+        </div>
+        <div class="nav-status"><span class="status-dot"></span> ARCHIVE SYNCED</div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="vault-hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">THE</span>
+                <span class="title-line title-outline">VAULT</span>
+                <span class="title-line title-accent">OF LIES</span>
+            </h1>
+            <p class="hero-subtitle">A digital repository of captured manipulation patterns, fake guru scripts, and high-pressure scam architectures. Dissected and archived for forensic study.</p>
+        </div>
+    </section>
+
+    <!-- SECTION DIVIDER -->
+    <div class="section-divider" style="padding: 20px 64px;">
+        <span class="divider-label">ACCESSING: ARCHIVE_ROOT</span>
+        <div style="height: 2px; background: var(--border-dim); width: 100%; margin: 10px 0;"></div>
+        <span class="divider-label">RECORDS: 4,281</span>
+    </div>
+
+    <!-- VAULT GRID -->
+    <div class="vault-grid">
+        
+        <!-- CASE 1 -->
+        <div class="case-file">
+            <div class="evidence-tag">EVIDENCE #001</div>
+            <span class="case-id">CASE #8821-X</span>
+            <h2 class="case-title">THE AI MILLIONAIRE BLUEPRINT</h2>
+            <div class="case-meta">
+                <span class="case-tag">HIGH RISK</span>
+                <span class="case-risk">94%</span>
+            </div>
+            <p class="case-summary">Manipulation via fake authority and urgency. Claims "100% automated income" using proprietary LLM wrappers. Discovered exploiting financial desperation.</p>
+            <div class="case-footer">
+                <span class="view-report">▶ VIEW DISSECTION</span>
+            </div>
+        </div>
+
+        <!-- CASE 2 -->
+        <div class="case-file">
+            <div class="evidence-tag">EVIDENCE #002</div>
+            <span class="case-id">CASE #9102-B</span>
+            <h2 class="case-title">COIN-VOID PUMP SCHEME</h2>
+            <div class="case-meta">
+                <span class="case-tag">CRITICAL</span>
+                <span class="case-risk">99%</span>
+            </div>
+            <p class="case-summary">Classic social engineering via artificial social proof. Uses bot nets to simulate engagement and "Fear Of Missing Out" (FOMO) triggers.</p>
+            <div class="case-footer">
+                <span class="view-report">▶ VIEW DISSECTION</span>
+            </div>
+        </div>
+
+        <!-- CASE 3 -->
+        <div class="case-file">
+            <div class="evidence-tag">EVIDENCE #003</div>
+            <span class="case-id">CASE #7731-C</span>
+            <h2 class="case-title">THE LAST CHANCE MASTERCLASS</h2>
+            <div class="case-meta">
+                <span class="case-tag">MEDIUM</span>
+                <span class="case-risk">62%</span>
+            </div>
+            <p class="case-summary">Urgency-based psychological pressure. Employs fake timers and "only 3 spots left" script to bypass rational decision-making.</p>
+            <div class="case-footer">
+                <span class="view-report">▶ VIEW DISSECTION</span>
+            </div>
+        </div>
+
+        <!-- CASE 4 -->
+        <div class="case-file">
+            <div class="evidence-tag">EVIDENCE #004</div>
+            <span class="case-id">CASE #4410-Z</span>
+            <h2 class="case-title">AI STARTUP VAPORWARE</h2>
+            <div class="case-meta">
+                <span class="case-tag">HIGH RISK</span>
+                <span class="case-risk">88%</span>
+            </div>
+            <p class="case-summary">Marketing manipulation using fake technical authority. Uses AI buzzwords to mask lack of functional product or logic.</p>
+            <div class="case-footer">
+                <span class="view-report">▶ VIEW DISSECTION</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- REPORT MODAL -->
+    <div id="report-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-tag">FORENSIC REPORT</div>
+                <button class="close-modal" onclick="closeModal()">✕ CLOSE</button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="report-header">
+                    <span id="modal-case-id" class="case-id">CASE #0000-X</span>
+                    <h2 id="modal-case-title" class="report-title">CASE TITLE</h2>
+                </div>
+
+                <div class="report-grid">
+                    <div class="report-main">
+                        <div class="detail-section">
+                            <h3 class="detail-label">DISSECTION SUMMARY</h3>
+                            <p id="modal-summary" class="detail-text">Detailed breakdown of the manipulation architecture discovered in this case...</p>
+                        </div>
+                        
+                        <div class="detail-section">
+                            <h3 class="detail-label">DETECTED SIGNALS</h3>
+                            <div id="modal-tactics" class="tactics-grid">
+                                <!-- Chips go here -->
+                            </div>
+                        </div>
+
+                        <div class="detail-section">
+                            <h3 class="detail-label">FORENSIC REASONING</h3>
+                            <div id="modal-reasoning" class="reasoning-box">
+                                <!-- Long reasoning goes here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="report-sidebar">
+                        <div class="sidebar-card">
+                            <span class="card-label">CREDIBILITY</span>
+                            <span id="modal-credibility" class="card-val">0%</span>
+                        </div>
+                        <div class="sidebar-card">
+                            <span class="card-label">MANIPULATION</span>
+                            <span id="modal-manipulation" class="card-val">0%</span>
+                        </div>
+                        <div class="sidebar-card">
+                            <span class="card-label">AI PROBABILITY</span>
+                            <span id="modal-ai" class="card-val">0%</span>
+                        </div>
+                        <div class="sidebar-card risk-active">
+                            <span class="card-label">RISK LEVEL</span>
+                            <span id="modal-risk" class="card-val">HIGH</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer-grid">
+        <div class="footer-brand">LIELENS</div>
+        <div class="footer-copy">TRUST NOTHING. VERIFY EVERYTHING. © 2026</div>
+    </footer>
+
+    <script>
+        const caseData = {
+            '8821-X': {
+                title: 'THE AI MILLIONAIRE BLUEPRINT',
+                risk: 'HIGH RISK',
+                riskVal: '94%',
+                credibility: '12%',
+                manipulation: '94%',
+                ai: '45%',
+                summary: 'Manipulation via fake authority and urgency. Claims "100% automated income" using proprietary LLM wrappers. Discovered exploiting financial desperation.',
+                tactics: ['FAKE AUTHORITY', 'URGENCY PRESSURE', 'UNREALISTIC CLAIMS', 'FINANCIAL EXPLOITATION'],
+                reasoning: 'The content employs a classic "Success Formula" structure designed to bypass rational skepticism. It utilizes high-frequency dopamine-trigger language ($100k, 2 days, automation) and manufactures fake scarcity through a countdown timer script. Behavioral analysis shows 100% correlation with known pyramid scheme linguistic patterns.'
+            },
+            '9102-B': {
+                title: 'COIN-VOID PUMP SCHEME',
+                risk: 'CRITICAL',
+                riskVal: '99%',
+                credibility: '2%',
+                manipulation: '99%',
+                ai: '88%',
+                summary: 'Classic social engineering via artificial social proof. Uses bot nets to simulate engagement and "Fear Of Missing Out" (FOMO) triggers.',
+                tactics: ['SOCIAL PROOF MANIPULATION', 'FOMO TRIGGER', 'PUMP & DUMP', 'BOT ENGAGEMENT'],
+                reasoning: 'Analysis of social engagement metrics shows 98.4% synthetic behavior. The narrative relies entirely on "Insider Positioning" simulation, claiming proprietary knowledge of an upcoming liquidity event. Logical analysis reveals zero underlying utility or business reality. Psychological pressure is at maximum levels.'
+            },
+            '7731-C': {
+                title: 'THE LAST CHANCE MASTERCLASS',
+                risk: 'MEDIUM',
+                riskVal: '62%',
+                credibility: '48%',
+                manipulation: '62%',
+                ai: '12%',
+                summary: 'Urgency-based psychological pressure. Employs fake timers and "only 3 spots left" script to bypass rational decision-making.',
+                tactics: ['FAKE SCARCITY', 'TIME PRESSURE', 'STATUS MANIPULATION'],
+                reasoning: 'While the product may exist, the marketing architecture is highly manipulative. The "Live" masterclass is actually a recorded loop, identified via metadata inconsistencies. Urgency signals are artificially generated to force a conversion before the user can evaluate the curriculum realism.'
+            },
+            '4410-Z': {
+                title: 'AI STARTUP VAPORWARE',
+                risk: 'HIGH RISK',
+                riskVal: '88%',
+                credibility: '24%',
+                manipulation: '88%',
+                ai: '62%',
+                summary: 'Marketing manipulation using fake technical authority. Uses AI buzzwords to mask lack of functional product or logic.',
+                tactics: ['TECHNICAL VAPORWARE', 'BUZZWORD STACKING', 'FAKE EXPERTISE'],
+                reasoning: 'The whitepaper contains recursive logic loops and non-functional code snippets. It targets insecure investors by simulating high-level technical complexity while failing basic logical consistency checks. Authority simulation is high, but technical probability is near zero.'
+            }
+        };
+
+        function openModal(id) {
+            const data = caseData[id];
+            if (!data) return;
+
+            document.getElementById('modal-case-id').textContent = `CASE #${id}`;
+            document.getElementById('modal-case-title').textContent = data.title;
+            document.getElementById('modal-summary').textContent = data.summary;
+            document.getElementById('modal-credibility').textContent = data.credibility;
+            document.getElementById('modal-manipulation').textContent = data.manipulation;
+            document.getElementById('modal-ai').textContent = data.ai;
+            document.getElementById('modal-risk').textContent = data.risk;
+            document.getElementById('modal-reasoning').textContent = data.reasoning;
+
+            const tacticsGrid = document.getElementById('modal-tactics');
+            tacticsGrid.innerHTML = '';
+            data.tactics.forEach(t => {
+                const chip = document.createElement('div');
+                chip.className = 'tactic-chip danger';
+                chip.textContent = t;
+                tacticsGrid.appendChild(chip);
+            });
+
+            document.getElementById('report-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('report-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Add click listeners to case files
+        document.querySelectorAll('.case-file').forEach(card => {
+            const id = card.querySelector('.case-id').textContent.replace('CASE #', '');
+            card.onclick = () => openModal(id);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIELENS | Digital Forensic Engine</title>
+    <meta name="description" content="LieLens is an AI-powered internet credibility and manipulation analysis system. Detect scams, fake urgency, and manipulation in seconds.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://js.puter.com/v2/"></script>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+    <!-- TICKER BAR -->
+    <div class="ticker-bar">
+        <div class="ticker-content">
+            <span>⚠ TRUST NOTHING. VERIFY EVERYTHING.</span>
+            <span>⚠ AI-POWERED MANIPULATION DETECTION</span>
+            <span>⚠ PASTE. SCAN. KNOW THE TRUTH.</span>
+            <span>⚠ TRUST NOTHING. VERIFY EVERYTHING.</span>
+            <span>⚠ AI-POWERED MANIPULATION DETECTION</span>
+            <span>⚠ PASTE. SCAN. KNOW THE TRUTH.</span>
+        </div>
+    </div>
+
+    <!-- NAV -->
+    <nav class="nav-grid">
+        <div class="nav-logo">
+            <span class="logo-icon">👁</span>
+        </div>
+        <div class="nav-links">
+            <a href="/static/index.html" class="nav-link active">SCAN</a>
+            <a href="/static/vault.html" class="nav-link">THE VAULT</a>
+            <a href="/static/about.html" class="nav-link">ABOUT</a>
+        </div>
+        <div class="nav-status">
+            <span class="status-dot"></span> ENGINE ONLINE
+        </div>
+    </nav>
+
+    <!-- HERO — ASYMMETRICAL POSTER -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">LIELENS</span>
+                <span class="title-line title-outline">FORENSIC</span>
+                <span class="title-line title-accent">ENGINE</span>
+            </h1>
+            <p class="hero-subtitle">Digital intelligence analysis for internet credibility. We dissect manipulation tactics, fake urgency, and psychological exploitation in real-time.</p>
+        </div>
+        
+        <div class="hero-badge">
+            <div class="badge-inner">
+                <span class="badge-text" style="font-family: var(--font-display); font-size: 3rem; color: var(--neon-red); line-height: 1;">TRUST<br>LEVEL: 0%</span>
+                <span class="badge-version" style="display: block; font-family: var(--font-body); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.15em; color: var(--neon-cyan); margin-top: 15px;">v2.0 FORENSIC</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION DIVIDER -->
+    <div class="section-divider">
+        <span class="divider-label">MODULE: ACQUISITION_01</span>
+        <div style="height: 2px; background: var(--border-dim); width: 100%;"></div>
+        <span class="divider-label">STATUS: READY</span>
+    </div>
+
+    <!-- INSTRUMENT PANEL -->
+    <section class="analysis-section">
+        <div class="input-panel">
+            <div class="panel-header">
+                <div class="panel-tag">TARGET_CONTENT_INPUT</div>
+                <div class="panel-tag" style="color: var(--text-dim);">UTF-8 SCANNER ACTIVE</div>
+            </div>
+            
+            <textarea id="target-content" placeholder="PASTE TARGET CONTENT FOR DISSECTION..."></textarea>
+            
+            <div class="input-footer" style="padding: 20px 25px; border-top: 3px solid var(--border-dim); display: flex; justify-content: space-between; align-items: center;">
+                <div id="char-count" class="char-count" style="font-family: var(--font-body); font-size: 0.75rem; color: var(--text-dim); font-weight: 700;">0 CHARS DETECTED</div>
+                <button class="analyze-btn" id="analyze-btn">INITIATE DISSECTION</button>
+            </div>
+        </div>
+
+        <aside class="input-sidebar">
+            <div class="sidebar-module">
+                <span class="module-label">ENGINE_STATE</span>
+                <span id="state-val" class="module-value" style="color: var(--neon-cyan);">READY</span>
+            </div>
+            <div class="sidebar-module">
+                <span class="module-label">PROVIDER_LATENCY</span>
+                <span id="latency-val" class="module-value">--ms</span>
+            </div>
+            <div class="sidebar-module">
+                <span class="module-label">SECURITY_LAYER</span>
+                <span class="module-value" style="font-size: 1.5rem; color: var(--text-dim);">AES-256 ENCRYPTED</span>
+            </div>
+        </aside>
+    </section>
+
+    <!-- RESULTS -->
+    <div id="results-section" class="results-section hidden">
+        
+        <!-- DIVIDER -->
+        <div class="section-divider">
+            <div class="divider-label">FORENSIC REPORT</div>
+            <div class="divider-line red"></div>
+        </div>
+
+        <!-- SCORE GRID -->
+        <div class="score-grid">
+            <div class="score-card" id="credibility-card">
+                <div class="score-label">CREDIBILITY</div>
+                <div class="score-value" id="credibility-score">--</div>
+                <div class="score-bar-track">
+                    <div class="score-bar-fill" id="credibility-bar"></div>
+                </div>
+            </div>
+            <div class="score-card" id="manipulation-card">
+                <div class="score-label">MANIPULATION</div>
+                <div class="score-value" id="manipulation-score">--</div>
+                <div class="score-bar-track">
+                    <div class="score-bar-fill" id="manipulation-bar"></div>
+                </div>
+            </div>
+            <div class="score-card" id="ai-card">
+                <div class="score-label">AI-GENERATED</div>
+                <div class="score-value" id="ai-score">--</div>
+                <div class="score-bar-track">
+                    <div class="score-bar-fill" id="ai-bar"></div>
+                </div>
+            </div>
+            <div class="score-card risk-card" id="risk-card">
+                <div class="score-label">RISK LEVEL</div>
+                <div class="risk-badge" id="risk-badge">--</div>
+            </div>
+        </div>
+
+        <!-- TACTICS -->
+        <div class="tactics-panel">
+            <div class="panel-header">
+                <span class="panel-tag cyan">DETECTED</span>
+                <span class="panel-label">MANIPULATION TACTICS</span>
+            </div>
+            <div class="tactics-grid" id="tactics-grid">
+                <!-- Filled by JS -->
+            </div>
+        </div>
+
+        <!-- REASONING -->
+        <div class="reasoning-panel">
+            <div class="panel-header">
+                <span class="panel-tag cyan">OUTPUT</span>
+                <span class="panel-label">REASONING ENGINE</span>
+            </div>
+            <div class="reasoning-content" id="reasoning-content">
+                <!-- Filled by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- LOADING OVERLAY -->
+    <div id="loading-overlay" class="loading-overlay hidden">
+        <div class="loading-content">
+            <div class="scanner-lines"></div>
+            <div class="loading-text">
+                <span class="loading-title">SCANNING TARGET</span>
+                <span class="loading-sub" id="loading-status">INITIALIZING FORENSIC ENGINE...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer-grid">
+        <div class="footer-brand">LIELENS</div>
+        <div class="footer-copy">TRUST NOTHING. VERIFY EVERYTHING. © 2026</div>
+    </footer>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
