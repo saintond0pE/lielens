@@ -75,7 +75,9 @@ async def analyze(request: AnalyzeRequest):
 async def root():
     return FileResponse("static/index.html")
 
+# Local development entry point
 if __name__ == "__main__":
     import uvicorn
+    # Vercel doesn't use this, but we keep it for local forensic work
     logger.info("Initializing LIELENS Forensic Engine on port 8000...")
-    uvicorn.run(app, host="0.0.0.0", port=8000, log_level="error")
+    uvicorn.run("server:app", host="0.0.0.0", port=8000, reload=True)
