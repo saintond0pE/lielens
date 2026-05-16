@@ -8,22 +8,19 @@ from pydantic import BaseModel
 from dotenv import load_dotenv
 import time
 
+import sys
+# Ensure the root directory is in path for Vercel
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 from core.analyzer import analyze_content
 
-# Configure logging for a "Forensic" feel
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s | [LIELENS-ENGINE] | %(levelname)s | %(message)s',
-    datefmt='%H:%M:%S'
-)
+# Configure logging
+logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("lielens")
 
 load_dotenv()
 
-app = FastAPI(
-    title="LIELENS Forensic Engine",
-    description="Digital intelligence analysis for internet credibility."
-)
+app = FastAPI(title="LIELENS Forensic Engine")
 
 app.add_middleware(
     CORSMiddleware,
@@ -32,8 +29,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Serve static files
-app.mount("/static", StaticFiles(directory="static"), name="static")
+# Serve static files with safety check
+if os.path.exists("static"):
+    app.mount("/static", StaticFiles(directory="static"), name="static")
 
 class AnalyzeRequest(BaseModel):
     content: str
